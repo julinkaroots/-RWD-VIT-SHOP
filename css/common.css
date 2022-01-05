@@ -1,0 +1,133 @@
+html{
+    font-size: 10px;
+}
+:root{
+    --main-title-color: #FA0001;
+    --secondary-title-color: #404040;
+    --third-title-color: #696969;
+}
+@media screen and (max-width:768px){
+    h2{
+        font-weight: 900;
+        font-size: 1.8rem;
+        letter-spacing: 1px;
+    }
+    .price{
+        font-weight: 500;
+        font-size: 2.5rem;
+    }
+    .main_nav{
+        display: none;
+    }
+}
+/* @media screen and (min-width:768px){
+    
+} */
+
+/* 手機 */
+/* 1. top */
+#menu_control{
+    display: none;
+    opacity: 0;
+}
+.main_header .header{
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.main_header .header .logo{
+    min-width: 175px;
+    height: 25px;
+    flex-grow: 1;
+}
+.main_header.header .logo a{
+    display: block;
+    height: 25px;
+}
+.main_header .header .logo img{
+    max-width: 100%;
+    max-height: 100%;
+}
+.main_header .header .links{
+    display: flex;
+    align-items: center;
+}
+.main_header .header .links .search_bar{
+    display: none;
+    opacity: 0;
+}
+.main_header .header .links ul > li:nth-of-type(1){
+    display: none;
+    opacity: 0;
+}
+.main_header .header .links ul{
+    display: flex;
+}
+.main_header .header .links ul li + li{
+    padding-right: 10px;
+}
+.main_header .header .links ul li a{
+    display: block;
+    width: 25px;
+    height: 25px;
+}
+.main_header .header .links ul img{
+    max-width: 100%;
+}
+.main_header .header .links .menu_btn{
+    width: 40px;
+    height: 40px;
+    display: block;
+    position: relative;
+    cursor: pointer;
+}
+.main_header .header .links .menu_btn span{
+    width: 1px;
+    height: 1px;
+    display: block;
+    overflow: hidden;
+}
+.main_header .header .links .menu_btn:before{
+    content: '';
+    position: absolute;
+    width: 36px;
+    height: 3px;
+    margin: auto;
+    left: 2px;
+    top: 0;
+    bottom: 0;
+    background: #1A3143;
+    box-shadow: 0px 8px 0px #1A3143,
+                0px -8px 0px #1A3143;
+}
+
+/* 2. 隱藏起來的nav bar */
+.main_header .main_nav{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 100;
+    top: 40px;
+    clip-path: circle(0% at 95.3% 8.5%);
+    transition: all .3s ease-out;
+    background:radial-gradient(ellipse at center,#F3A029,#ED1B25);
+}
+.main_header .main_nav a{
+    text-decoration: none;
+    color: #FFFFFF;
+    font-weight: 800;
+    font-size: 20px;
+    display: block;
+    padding: 5px 10px;
+}
+.main_header .main_nav li ul{
+    padding-left: 135px;
+}
+#menu_btn.close{
+    transform: rotate(90deg);
+}
+.main_nav.active{
+    display: block;
+    clip-path: circle(140% at 95.3% 8.5%);
+    transition: all .3s ease-out;
+}
