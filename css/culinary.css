@@ -1,0 +1,48 @@
+/* banner */
+.banner{
+    width: 100%;
+    padding-top: 60px;
+}
+.banner img{
+    width: 100%;
+}
+/* article */
+.article.container{
+    margin-bottom: 30px;
+}
+.article.container .row .col-12{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    margin: 20px 0;
+}
+.article.container .row .col-12 a .item{
+    width: 300px;
+    background-color: #F8F8F8;
+}
+.article.container .row .col-12 a .item .pic{
+    width: 100%;
+}
+.article.container .row .col-12 a .item .pic img{
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+}
+.article.container .row .col-12 a .item .txt h3{
+    color: var(--main-title-color);
+    margin: 10px 0;
+}
+.article.container .row .col-12 a .item .txt .date{
+    color: var(--third-title-color);
+    display: block;
+    margin-bottom: 10px;
+} 
+.article.container .row .col-12 a .item .txt p{
+    color: var(--secondary-title-color);
+}
+@media screen and (min-width:992px) {
+    .banner{
+        padding-top: 100px;
+    }
+}

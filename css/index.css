@@ -1,11 +1,10 @@
-/* slider */
+/* main slider */
 .owl-carousel .owl-nav{
     margin: 0;
 }
 .owl-carousel .owl-stage-outer{
     height: 100%;
 }
-
 .owl-theme .owl-nav.disabled + .owl-dots {
     margin-top: 0;
 }
@@ -15,20 +14,25 @@
     left: 0;
     right: 0;
 }
-
+/* 桌機圖片隱藏 */
+.full{
+    display: none !important;
+}
+.slider .slide{
+    padding-top: 60px;
+}
 /* arrow: section of the main slider */
-.owl-carousel .owl-nav .owl-prev,.owl-carousel .owl-nav .owl-next{
+.owl-carousel .owl-nav button.owl-prev,.owl-carousel .owl-nav button.owl-next{
     position: absolute;
     margin: 0px;
-    top: 40%;
+    top: 50%;
     width: 30px;
     height: 30px;
-    /* background-color: rgb(255, 255, 255, 0.8); */
-    background-color: #797979!important;
+    background-color: #797979;
     border-radius: 50%;
     text-align: center;
     z-index: 99;
-    font-size: 30px!important;
+    font-size: 30px;
 }
 .owl-carousel .owl-nav .owl-prev{
     left: 0;
@@ -39,13 +43,17 @@
     right: 0;
     margin-right: 5px;
 } 
-
 /* section of choosing products */
 .container{
-    margin: 30px auto;
+    margin: 30px auto 0px;
+    padding-left: 25px;
+    padding-right: 25px;
 }
 .container .product_choice{
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 .container .product_choice .product_slider{
     width: 40%;
@@ -55,8 +63,6 @@
     position: relative;
 }
 .container .product_choice .product_slider .product_slide{
-    width: 120px;
-    position: absolute;
     margin: auto;
 }
 .container .product_choice .product_slider .product_slide img{
@@ -65,6 +71,8 @@
 }
 .container .product_choice .info{
     width: 60%;
+    margin-top: 30px;
+    margin-left: 10px;
 }
 .container .product_choice .info h2{
     color: var(--main-title-color);
@@ -73,7 +81,7 @@
 .container .product_choice .info .price{
     text-align: center;
     color: var(--secondary-title-color);
-    padding: 10px 0px;
+    padding: 5px 0px;
 }
 .container .product_choice .info .links{
     display: flex;
@@ -83,9 +91,7 @@
     padding-right: 10px;
 }
 .container .product_choice .info .links a{
-    display: block;
-    width: 25px;
-    height: 25px;
+    width: 30px;
 }
 .container .product_choice .info .links a img{
     max-width: 100%;
@@ -94,64 +100,263 @@
 /* arrow: section of product slider */
 #productSlider .owl-stage-outer{
     position: relative;
+    margin-bottom: 10px;
 }
-#productSlider{
-    position: relative;
+#productSlider .owl-nav{
+    position: absolute;
+    top: 100%;
+    z-index: 99;
 }
 #productSlider .owl-prev, #productSlider .owl-next{
-    position: absolute;
-    margin: 0px;
-    top: 105px;
+    position: relative;
     width: 20px;
-    height: 15px;
-    /* background-color: #F9D37A!important; */
+    height: 20px;
+    background-color: #F9D37A!important;
     border-radius: 20%;
     text-align: center;
     z-index: 99;
     font-size: 2rem!important;
 }
 #productSlider .owl-prev{
-    left: 0;
+    left: -200%;
 }
 #productSlider .owl-next{
-    right: 0;
+    right: -200%;
 }
 #productSlider .owl-dots{
-    bottom: -10%;
-}
-.owl-carousel.off {
-    display: flex;
-    margin: 1px;
-    /* margin-bottom: none; */
-
-}
-
-
-/* .main_header .header .links .search_bar{ 
-    width: 200px;
-    height: 25px;
+    top: 100%;
+    justify-content: center;
+    align-items: flex-start;
     display: flex;
 }
-.main_header .header .links .search_bar .search_section{
-    border:0;
-    background-color:#E5DEE0;
-    width: 300px;
+/* instructions */
+.instruction.container .row{
+    margin-top: 50px;
 }
-.main_header .header .links .search_bar .search_section:focus{
-    outline: none;
+.instruction.container .row .col-12 .title{
+    color: var(--secondary-title-color);
+    padding: 0px 10px 10px;
 }
-::placeholder{
-    font-size:16px;
-    width: 200px;
-    font-style: bold;
-    color:rgb(26, 49, 66);
+.instruction.container .row .col-12 span{
+    color: var(--third-title-color);
+    padding-left: 10px;
 }
-.main_header .header .links .search_bar .search_btn{
-    background-color: rgb(26, 49, 66);;
-    border: none;
+.instruction.container .row .col-12 .item{
+    display: flex;
+    padding: 10px 0px;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
 }
-.main_header .header .links .search_bar .fa{
+.instruction.container .row .col-12 .item .pic{
+    width: 60px;
+    display: flex;
+    padding: 0px 10px;
+    align-items: center;
+    justify-content: center;
+}
+.instruction.container .row .col-12 .item .pic img{
+    max-width: 100%;
+    max-height: 100%;
+}
+.instruction.container .row .col-12 .item .wrap{
+    width: 60%;
+}
+.instruction.container .row .col-12 .item .wrap .step{
+    padding-bottom: 10px;
+    color: var(--third-title-color);
+}
+.instruction .noodle_string img{
+    max-width: 100%;
+    max-height: 100%;
+    opacity: 0.2;
+}
+/* bestsellers */
+.bestseller h2{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    color: var(--main-title-color);
+    margin: 10px auto;
+}
+.bestseller h2 img{
     width: 30px;
-    border:0;
-    color: #E2E0E0;
-} */
+    height: 30px;
+}
+.bestseller .item{
+    width: 100%;
+    margin: 10px 0px;
+}
+.bestseller .item a img{
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 50px;
+}
+/* culinary */
+.culinary h2{
+    color: var(--main-title-color);
+    text-align: center;
+    margin: 10px auto;
+    padding-top: 20px;
+}
+.culinary .row .col-12, .culinary .row .col-lg-4{
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+.culinary .row .video{
+    width: 100%
+}
+.culinary .row .video iframe{
+    width: 100%;
+}
+.culinary .row .subtitle{
+    color: var(--secondary-title-color);
+    margin: 10px 0px;
+}
+.culinary .row .desc{
+    color: var(--third-title-color);
+}
+/* discover */
+.discover{
+    background-image: url(/img/slider\ or\ banner/discover_bgc.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 50px 0px;
+    background-position: bottom;
+}
+.discover h2{
+    text-align: center;
+    color: var(--secondary-title-color);
+}
+.discover .view_more{
+    justify-content: center;
+    margin-top: 20px;
+}
+.view_more{
+    display: flex;
+    justify-content:right;
+}
+.view_more_btn{
+    width: 150px;
+    height: 30px;
+    border: 3px solid #FA0001;
+    border-radius: 300px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.view_more_btn a{
+    font-size: 18px;
+    color: #000000;
+}
+.view_more_btn:hover a{
+    color: #fff;
+}
+.view_more_btn:hover{
+    background-color: #FA0001;
+}
+@media screen and (min-width: 992px) {
+    /* 手機圖片隱藏 */
+    .mobile{
+        display: none !important;
+    }
+    .full{
+        display: block !important;
+    }
+    /* main slider */
+    .slider .slide{
+        padding-top: 100px;
+    }
+    /* product slider */
+    .container .product_choice{
+        flex-direction: row;
+    }
+    .container .product_choice .info .desc{
+        padding: 10px 0px;
+        color: var(--third-title-color);
+    }
+    .container .product_choice .info .price{
+        padding: 10px 0px;
+    }
+    .container .product_choice .info .links a{
+        display: block;
+        width: 50px;
+    }
+    /* instructions */
+    .col-lg-12 .instruction_wrapper{
+        display: flex;
+        align-items: center;
+        padding: 0px 10px;
+        justify-content: space-between;
+    }
+    .col-12 .instruction_wrapper .item .pic{
+        padding: 0;
+        margin-right: 10px;
+    }
+    .col-12 .instruction_wrapper .item .wrap{
+        width: 200px;
+    }
+    /* bestsellers */
+    .bestseller .item{
+        height: 297px;
+        margin: 0;
+        position: relative;
+    }
+    .bestseller .item img{
+        position: absolute;
+    }
+    .bestseller .item:nth-child(3) a >img{
+        right: 0;
+        top: -8%;
+    }
+    .bestseller .item:nth-child(4) a >img{
+        bottom: 13%;
+    }
+    /* culinary */
+    .culinary{
+        background-image: url(/img/slider\ or\ banner/culinary_bgc.png);
+        background-size: contain;
+        border-radius: 50px;
+        background-repeat: no-repeat;
+    }
+    .culinary .row{
+        flex-wrap: nowrap;
+    }
+
+    .culinary .row .col-lg-4 .video{
+        display: flex;
+        justify-content: center;
+    }
+    .culinary .row .col-lg-4:nth-child(odd) .video{
+        padding-top: 50px;
+    }
+    .culinary .row .col-lg-4 .video iframe{
+        width: 300px;
+        height: 300px;
+    }
+    .culinary .row .col-lg-4 .subtitle{
+        width: 300px;
+    }
+    .culinary .row .col-lg-4 .desc{
+        width: 300px;
+    }
+    /* discover */
+    .discover{
+        padding: 150px 0px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

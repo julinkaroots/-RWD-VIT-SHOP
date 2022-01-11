@@ -1,28 +1,116 @@
 html{
     font-size: 10px;
 }
+body{
+    font-family: 'Changa', sans-serif;
+}
 :root{
     --main-title-color: #FA0001;
     --secondary-title-color: #404040;
     --third-title-color: #696969;
 }
-@media screen and (max-width:768px){
+a{
+    text-decoration: none;
+    display: block;
+}
+/* 針對字型處理區 */
+/* 450px以內 */
+@media screen and (max-width:450px){
     h2{
         font-weight: 900;
-        font-size: 1.8rem;
+        font-size: 2.5rem;
+        letter-spacing: 1px;
+    }
+    .price{
+        font-weight: 500;
+        font-size: 2rem;
+    }
+    .instruction .title{
+        font-weight: 900;
+        font-size: 2rem;
+    }
+    .instruction span{
+        font-weight: 700;
+        font-size: 1.5rem;
+    }
+    .instruction .step{
+        font-weight: 500;
+        font-size: 1.5rem;
+    }
+    .culinary .row .subtitle{
+        font-weight: 700;
+        font-size: 2rem;
+    }
+    .culinary .row .desc,p,figcaption{
+        font-weight: 500;
+        font-size: 1.5rem;
+    }
+    h3,h4,.txt{
+        font-weight: 900;
+        font-size: 2rem;
+    }
+
+}
+/* 450~992 */
+@media screen and (min-width:450px){
+    h2{
+        font-weight: 900;
+        font-size: 3rem;
         letter-spacing: 1px;
     }
     .price{
         font-weight: 500;
         font-size: 2.5rem;
     }
-    .main_nav{
-        display: none;
+    .instruction .title{
+        font-weight: 900;
+        font-size: 2.5rem;
+    }
+    .instruction span{
+        font-weight: 700;
+        font-size: 2rem;
+    }
+    .instruction .step{
+        font-weight: 500;
+        font-size: 2rem;
+    }
+    .culinary .row .subtitle{
+        font-weight: 700;
+        font-size: 2.5rem;
+    }
+    .culinary .row .desc,p,figcaption{
+        font-weight: 500;
+        font-size: 2rem;
+    }
+    h3{
+        font-weight: 900;
+        font-size: 2.5rem;
+    }
+    h4,.txt{
+        font-weight: 900;
+        font-size: 2rem;
     }
 }
-/* @media screen and (min-width:768px){
-    
-} */
+
+/* 992以上 */
+@media screen and (min-width:992px){
+    h2{
+        font-weight: 900;
+        font-size: 4rem;
+    }
+    .price{
+        font-weight: 500;
+        font-size: 3.5rem;
+    }
+    .container .product_choice .info .desc,p,figcaption{
+        font-weight: 500;
+        font-size: 2rem;
+    }
+    h3{
+        font-weight: 900;
+        font-size: 3rem;
+    }
+}
 
 /* 手機 */
 /* 1. top */
@@ -30,19 +118,26 @@ html{
     display: none;
     opacity: 0;
 }
+.main_header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
 .main_header .header{
+    width: 100%;
     display: flex;
     align-items: center;
-    position: relative;
+    justify-content: space-between;
+    background-color: #fff;
 }
 .main_header .header .logo{
     min-width: 175px;
-    height: 25px;
-    flex-grow: 1;
 }
-.main_header.header .logo a{
+.main_header .header .logo a{
     display: block;
-    height: 25px;
+    height: 35px;
 }
 .main_header .header .logo img{
     max-width: 100%;
@@ -51,7 +146,9 @@ html{
 .main_header .header .links{
     display: flex;
     align-items: center;
+    margin: 10px 0px;
 }
+/* 隱藏搜尋列 */
 .main_header .header .links .search_bar{
     display: none;
     opacity: 0;
@@ -68,11 +165,11 @@ html{
 }
 .main_header .header .links ul li a{
     display: block;
-    width: 25px;
-    height: 25px;
+    width: 30px;
 }
 .main_header .header .links ul img{
     max-width: 100%;
+    display: block;
 }
 .main_header .header .links .menu_btn{
     width: 40px;
@@ -100,14 +197,17 @@ html{
     box-shadow: 0px 8px 0px #1A3143,
                 0px -8px 0px #1A3143;
 }
-
-/* 2. 隱藏起來的nav bar */
+/* 隱藏語言 */
+#lang_size{
+    display: none;
+}
+/* 隱藏起來的nav bar */
 .main_header .main_nav{
     width: 100%;
     height: 100%;
     position: absolute;
     z-index: 100;
-    top: 40px;
+    top: 60px;
     clip-path: circle(0% at 95.3% 8.5%);
     transition: all .3s ease-out;
     background:radial-gradient(ellipse at center,#F3A029,#ED1B25);
@@ -127,7 +227,226 @@ html{
     transform: rotate(90deg);
 }
 .main_nav.active{
+    position: fixed;
     display: block;
     clip-path: circle(140% at 95.3% 8.5%);
     transition: all .3s ease-out;
 }
+/* footer */
+/* logo消失 */
+img[alt="LOGO"]{
+    display: none;
+}
+/* nav content消失 */
+.footer_col_products{
+    display: none;
+}
+.footer_col_marketing .icons{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+.footer_col_marketing .icons a{
+    font-size: 30px;
+    padding: 0px 10px;
+    color:#FFC428
+}
+.footer_col_marketing .icons a:hover{
+    color: #EAA128;
+}
+.copyright{
+    margin: auto;
+    font-weight: 300;
+    padding-top: 20px;
+    text-align: center;
+}
+.copyright_bottom{
+    text-align: center;
+    background-color: #F9D37A;
+    padding: 10px 0px;
+}
+/* 平板橫和桌機 */
+@media screen and (min-width:992px) {
+    /* 漢堡消失 */
+    .menu_btn{
+        display: none !important;
+    }
+    /* 語言出現 */
+    #lang_size{
+        display: block;
+        width: 130px;
+        height: 25px;
+        margin: 0px 10px;
+    }
+    /* 搜尋列出現 */
+    .main_header .header .links .search_bar{ 
+        width: 200px;
+        height: 25px;
+        display: flex;
+        margin-right: 20px;
+        opacity: 1;
+    }
+    .main_header .header .links .search_bar .search_section{
+        border:0;
+        background-color:#E5DEE0;
+        width: 300px;
+    }
+    .main_header .header .links .search_bar .search_section:focus{
+        outline: none;
+    }
+    ::placeholder{
+        font-size:16px;
+        width: 200px;
+        font-style: bold;
+    }
+    .main_header .header .links .search_bar .search_btn{
+        background-color: rgb(26, 49, 66);;
+        border: none;
+    }
+    .main_header .header .links .search_bar .fa{
+        width: 30px;
+        border:0;
+        color: #E2E0E0;
+    }
+    /* nav出現 */
+    .display{
+        display: block;
+    }
+    .main_nav{
+        clip-path: none !important;
+        position: relative;
+        top: 50px !important;
+        display: flex;
+        justify-content: space-evenly;
+    }
+    /* nav設定 */
+    .main_nav li{
+        display: flex;
+        justify-content: center;
+        width: 250px;
+        height: 50px;
+        align-items: center;
+        padding: 0px 15px;
+        position: relative;
+        white-space: wrap;
+    }
+    .main_nav a{
+        text-decoration: none;
+        color: #FFFFFF;
+        font-weight: 800;
+        font-size: 20px;
+    }
+    .main_nav li > a:hover{
+        color: #000000;
+    }
+    .main_nav li ul > li > a:hover{
+        text-decoration-line: underline;
+    }
+    /* 下拉選單 */
+    .main_nav ul{
+        padding-left: 0 !important;
+        display: none;
+        position: absolute;
+        z-index: 100;
+        top: 100%;
+        background:radial-gradient(ellipse at center,#F3A029,#ED1B25);
+    }
+    .main_nav li:hover ul{
+        display: block;
+    }
+    /* icon */
+    /* home icon出現 */
+    .main_header .header .links ul > li:nth-of-type(1){
+        display: block;
+        opacity: 1;
+    }
+    /* 問題要問 */
+    /* .main_header .header .links ul > li:nth-of-type(1) a:hover{
+        background-image: url(../img/icon/home_move.gif);
+    } */
+    .links ul{
+        display: flex;
+        margin-right: 15px;
+    }
+    .links ul li{
+        padding: 0px 8px;
+    }
+    .links ul img{
+        width: 30px;
+        height: 30px;
+    }
+    /* logo */
+    .main_header .header .logo{
+        width: 300px;
+        margin-left: 10px;
+    }
+    /* 2. footer */
+    .footer.container{
+        max-width: inherit;
+        margin: 0px;
+    }
+    .footer{
+        background-image: url("/img/slider\ or\ banner/footer_bgc.png");
+        background-repeat: repeat;
+        background-size:contain;
+    }
+    .footer_frame{
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    /* logo出現 */
+    img[alt="LOGO"]{
+        display: block;
+    }
+    .footer_col_marketing img{
+        width: 300px;
+        height: 50px;
+        width: 100%;
+    }
+    .footer_col_marketing{
+        width: 300px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        padding: 20px 0px;
+        height: 220px;
+    }
+    .footer_col_marketing .icons{
+        flex-wrap: nowrap;
+        padding: 0px 30px;
+        display: flex;
+    }
+    .footer_col_marketing .icons a{
+        font-size: 50px;
+        padding: 0px 10px;
+        color:#FFC428
+    }
+    .footer_col_marketing .icons a:hover{
+        color: #EAA128;
+    }
+    /* nav content出現 */
+    .footer_col_products{
+        display: block;
+        width: 900px;
+        display: flex;
+        justify-content: space-around;
+    }
+    .footer_col_products a{
+        font-size: 18px;
+        text-decoration:none;
+        font-weight: 300;
+        color: #696969;
+    }
+    .footer_col_products .item h4 a{
+        font-size: 25px;
+        font-weight: 800;
+        color: #404040;
+    }
+    .footer_col_products .item ul li{
+        padding: 15px 0px;
+    }
+    
+    }

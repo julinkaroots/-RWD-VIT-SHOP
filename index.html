@@ -3,104 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>V.I.T SHOP</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-    integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <!-- ------*js-------- -->
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <!-- ------js*-------- -->
+    <!-- ------*css-------- -->
     <link rel="stylesheet" href="js/owl/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="js/owl/assets/owl.theme.default.css">
-    <script src = js/common.js></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
+    <!-- ------css*-------- -->
+    <!-- ------*js-------- -->
     <script src= js/owl/owl.carousel.min.js></script>
-    
+    <script src="js/common.js"></script>
+    <!-- ------js*-------- -->
 </head>
 <body>
+    <!-- 1. header -->
     <script src = js/header.js></script>
-    <!-- <input type="checkbox" id="menu_control">
-    <div class="main_header">
-        <div class="header">
-            <h1 class="logo">
-                <a href="index.html"><img src="img/logo.png" alt="logo"></a>
-            </h1>
-            <div class="links">
-                <div class="search_bar">
-                    <input class="search_section" type="input" placeholder="find your love here!" onfocus="this.placeholder='';" onblur="this.placeholder='';">
-                    <button class="search_btn"><i class="fa fa-search"></i></button>
-                </div>
-                <ul>
-                    <li>
-                        <a href="index.html"><img src="img/icon/home.png" alt="home" onmouseover="this.src=' /img/icon/home_move.gif';" onmouseout="this.src='img/icon/home.png';">
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#"><img src="img/icon/login.png" alt="login" onmouseover="this.src='img/icon/h_header_login_move.gif';" onmouseout="this.src='img/icon/login.png';">
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#"><img src="img/icon/heart.png" alt="fovorite list" onmouseover="this.src='img/icon/h_pd_heart_hover.png';" onmouseout="this.src='img/icon/heart.png'">
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#"><img src="img/icon/cart.png" alt="shopping cart" onmouseover="this.src='img/icon/h_pd_cart_hover.gif';" onmouseout="this.src='img/icon/cart.png'">
-                        </a>
-                    </li>
-                </ul>
-                <label for="menu_control" class="menu_btn" id="menu_btn">
-                        <span>menu</span>
-                </label>
-            </div>
-        </div>
-        <ul class="main_nav">
-            <li><a>OUR PRODUCTS</a>
-                <ul>
-                    <li><a href="instant_noodles.html">INSTANT NOODLES</a></li>
-                    <li><a href="#">PHO RICE NOODLES</a></li>
-                    <li><a href="#">BOWL CUP TRAY</a></li>
-                    <li><a href="#">VERMICELLI</a></li>
-                </ul>
-            </li>
-            <li><a href="culinary.html">CULINARY WORLD</a></li>
-            <li><a href="#">MAGIC NOODLE</a>
-                <ul>
-                    <li><a href="#">INGREDIENTS &<br> NUTRITION FACTS</a></li>
-                    <li><a href="#">PRODUCTION PROCESS</a></li>
-                </ul>
-            </li>
-            <li><a href="#">KNOW MORE ABOUT US</a>
-                <ul>
-                    <li><a href="#">BRANCHES</a></li>
-                    <li><a href="#">VISIT OUR FACTORY</a></li>
-                </ul>
-            </li>
-        </ul>
-    </div> -->
-
-
-
-
+    <!-- 2. main slider -->
     <div class="slider owl-carousel owl-theme">
         <div class="slide">
             <a href="#">
-                <img src="img/slider or banner/hp_haohao.jpg" alt="doraemon banner">
+                <img src="img/slider or banner/hp_haohao.jpg" alt="doraemon banner" class="mobile">
+                <img src="img/slider or banner/slider_doraemon.png" alt="doraemon banner" class="full">
             </a>
         </div>
         <div class="slide">
             <a href="#">
-                <img src="img/slider or banner/hp_doraemon.jpg" alt="caykay cup noodle">
+                <img src="img/slider or banner/hp_doraemon.jpg" alt="caykay cup noodle" class="mobile">
+                <img src="img/slider or banner/slider_cup.png" alt="cup noodle" class="full">
             </a>
         </div>
         <div class="slide">
             <a href="#">
-                <img src="img/slider or banner/hp_doraemon_all.jpg" alt="caykay noodle">
+                <img src="img/slider or banner/hp_doraemon_all.jpg" alt="caykay noodle" class="mobile">
+                <img src="img/slider or banner/slider_caykay.jpg" alt="caykay noodle" class="full">
             </a>
         </div>
         <div class="slide">
             <a href="#">
-                <img src="img/slider or banner/hp_udon.jpg" alt="caykay noodle">
+                <img src="img/slider or banner/hp_udon.jpg" alt="caykay noodle" class="mobile">
+                <img src="img/slider or banner/slider_pho.png" alt="pho tnon" class="full">
             </a>
         </div>
     </div>
+    <!-- 3. product slider -->
     <div class="container">
         <div class="product_choice">
             <div class="product_slider  owl-carousel owl-theme" id="productSlider">
@@ -108,34 +56,160 @@
                     <a href="#"><img src="img/products/instant_noodles/haohao/pork.png" alt=""></a>
                 </div>
                 <div class="product_slide">
-                    <a href="#"><img src="img/products/instant_noodles/haohao/pork.png" alt=""></a>
+                    <a href="#"><img src="img/products/instant_noodles/haohao/sate.png" alt=""></a>
                 </div>
                 <div class="product_slide">
-                    <a href="#"><img src="img/products/instant_noodles/haohao/pork.png" alt=""></a>
+                    <a href="#"><img src="img/products/instant_noodles/haohao/shrimp.png" alt=""></a>
+                </div>
+                <div class="product_slide">
+                    <a href="#"><img src="img/products/instant_noodles/haohao/golden.png" alt=""></a>
+                </div>
+                <div class="product_slide">
+                    <a href="#"><img src="img/products/instant_noodles/haohao/stf_onion.png" alt=""></a>
+                </div>
+                <div class="product_slide">
+                    <a href="#"><img src="img/products/instant_noodles/haohao/stf_shrimp.png" alt=""></a>
+                </div>
+                <div class="product_slide">
+                    <a href="#"><img src="img/products/instant_noodles/haohao/vegan.png" alt=""></a>
                 </div>
             </div>
             <div class="info">
                 <h2>Hao Hao Pork Rib and Fried Garlic Flavored Noodle</h2>
+                <div class="desc full">
+                    <span>Manufacture in accordance with Japanese standards and technology, with the continuous operation, support and meticulous supervision of Japanese staffs together with Vietnamese staff methodically trained. We are “guarantee” for the quality of every Hao Hao Noodle pack before being launched into the market.</span>
+                </div>
                 <div class="price">$ 0.5 USD</div>
                 <div class="links">
                     <div class="cart">
-                        <a href="#"><img src="img/icon/cart.png" alt="shopping cart" onmouseover="this.src='img/icon/h_pd_cart_hover.gif';" onmouseout="this.src='img/icon/cart.png'">
+                        <a href="#"><img src="img/icon/cart.png" alt="shopping cart" class="cart">
                         </a>
                     </div>
                     <div class="favorite">
-                        <a href="#"><img src="img/icon/heart.png" alt="fovorite list" onmouseover="this.src='img/icon/h_pd_heart_hover.png';" onmouseout="this.src='img/icon/heart.png'">
+                        <a href="#"><img src="img/icon/heart.png" alt="fovorite list" class="fovoriteList">
                         </a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
-
-
-
-    
-    </section>
+    <!-- 4. instructions -->
+    <div class="instruction container">
+        <div class="row">
+            <div class="col-12 col-lg-12">
+                <div class="title">COOKING INSTRUCTIONS</div>
+                <span>General</span>
+                <div class="instruction_wrapper">
+                    <div class="item">
+                        <div class="pic"><img src="img/step/general_add.png" alt="Step1">
+                        </div>
+                        <div class="wrap">
+                            <div class="step">Step1</div>
+                            <div class="step_content">Put dried noodle, powder soup package and oil package in the cup</div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="pic"><img src="img/step/general_pour.png" alt="Step2">
+                        </div>
+                        <div class="wrap">
+                            <div class="step">Step2</div>
+                            <div class="step_content">Pour 400 ml of boiling water in, close the lid and wait for 3 minutes</div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="pic"><img src="img/step/general_finish.png" alt="Step3">
+                        </div>
+                        <div class="wrap">
+                            <div class="step">Step3</div>
+                            <div class="step_content">Stir well and serve immediately</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="noodle_string"><img src="img/icon/noodle.png" alt=""></div>
+                <span>Stir-fried</span>
+                <div class="instruction_wrapper">
+                    <div class="item">
+                        <div class="pic"><img src="img/step/stir-fried_add.png" alt="Step1">
+                        </div>
+                        <div class="wrap">
+                            <div class="step">Step1</div>
+                            <div class="step_content">Put dried noodle, powder soup package and oil package in the cup</div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="pic"><img src="img/step/stir-fried_pour.png" alt="Step2">
+                        </div>
+                        <div class="wrap">
+                            <div class="step">Step2</div>
+                            <div class="step_content">Pour 400 ml of boiling water in, close the lid and wait for 3 minutes</div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="pic"><img src="img/step/stir-fried_finish.png" alt="Step3">
+                        </div>
+                        <div class="wrap">
+                            <div class="step">Step3</div>
+                            <div class="step_content">Stir well and serve immediately</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 5. bestseller -->
+    <div class="bestseller container">
+        <h2><img src="img/bestseller/hot.gif" alt="fire icon">BEST SELLERS<img src="img/bestseller/hot.gif" alt="fire icon"></h2>
+        <div class="item" data-aos="fade-in" data-aos-duration="1000">
+            <a href="#"><img src="img/bestseller/doraemon_cup.jpg" alt="doraemon cup noodle"></a>
+        </div>
+        <div class="item" data-aos="fade-in" data-aos-duration="1000">
+            <a href="#"><img src="img/bestseller/haohao.png" alt="haohao noodle"></a>
+        </div>
+        <div class="item" data-aos="fade-in" data-aos-duration="1000">
+            <a href="#"><img src="img/bestseller/haohao_cup.png" alt="haohao cup noodle"></a>
+        </div>
+    </div>
+    <!-- 6. to share different ways of cooking noodles -->
+    <div class="culinary container">
+        <h2>CULINARY CORNER</h2>
+        <div class="row center">
+            <div class="col-12 col-lg-4 center">
+                <div class="video">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/9V2cs53MLYg" title="YouTube video player" frameborder="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="subtitle">Pho with oyster cockle and Thai sauce</div>
+                <div class="desc">Add a new dish to your menu of sauce dishes! With simple processing way, you will have oyster...</div>
+            </div>
+            <div class="col-12 col-lg-4 center">
+                <div class="video">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/m_rO_SjsFkY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="subtitle">Hang Nga rice noodles with meat-pie and quail egg</div>
+                <div class="desc">It is not difficult to make meat-pie rice noodle as you believe. What you need to make a very attractive pot of meat-pie rice noodles to well...</div>
+            </div>
+            <div class="col-12 col-lg-4 center">
+                <div class="video">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/zSyig9mUtRg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="subtitle">Gochi noodles mixed with saute oyster</div>
+                <div class="desc">Let's try this strange and unique recipe: Gochi noodle mixed with saute oyster. This dish is delicious, nourish and easy to make, suitable for...
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- discover the process -->
+    <div class="discover">
+        <h2>TRUST US<br>DISCOVER HOW<br>OUR PRODUCTS ARE MADE</h2>
+        <div class="view_more">
+            <div class="view_more_btn">
+                <a href="production.html">View more&nbsp;
+                    <i class="far fa-hand-point-right"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- footer -->
+    <script src="js/footer.js"></script>
     <script>
         $(document).ready(function(){
             $('.owl-carousel').owlCarousel({
@@ -146,59 +220,13 @@
                     0:{
                         items:1,
                         nav:true
-                    }
-                    // 768:{
-                    //     items:1,
-                    //     nav:true,
-                    //     loop:true
-                    // }
+                    },
                 }
             })
         }); 
     </script>
-    
-    <script>
-        //owl carousel
-    // $(function() {
-    //     var owl = $('.owl-carousel'),
-    //         owlOptions = {
-    //             loop:true,
-    //             margin:10,
-    //             responsiveClass:true,
-    //             responsive:{
-    //                 0:{
-    //                     items:1,
-    //                     nav:true
-    //                 },
-    //                 768:{
-    //                     items:1,
-    //                     nav:true,
-    //                     loop:true
-    //                 }
-    //             }
-    //         };
-
-    //     if ($(window).width() < 992 ) {
-    //         var owlAct = owl.owlCarousel(owlOptions);
-    //     } else {
-    //         owl.addClass('off');
-    //     };
-
-    //     $(window).resize(function() {
-    //         if ( $(window).width() < 992 ) {
-    //             if ( $('.owl-carousel').hasClass('off') ) {
-    //                 var owlAct = owl.owlCarousel(owlOptions);
-    //                 owl.removeClass('off');
-    //             }
-    //         } else {
-    //             if ( !$('.owl-carousel').hasClass('off') ) {
-    //                 owl.addClass('off').trigger('destroy.owl.carousel');
-    //                 owl.find('.owl-stage-outer').children(':eq(0)').unwrap();
-    //             }
-    //         }
-    //     });
-    // });
-    </script>
-    <script src= js/index.js></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"></script>
+    <script>AOS.init();</script>
 </body>
 </html>

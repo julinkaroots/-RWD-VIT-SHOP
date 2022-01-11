@@ -1,0 +1,103 @@
+/* push */
+.breadcrumb.container{
+    padding-top: 60px;
+    padding-left: 15px;
+}
+/* main content */
+.content.container .row .col-12 .main_wrapper h3{
+    color: var(--main-title-color);
+    margin-bottom: 30px;
+}
+.content.container .row .col-12 .main_wrapper .content p{
+    color: var(--third-title-color);
+    line-height: 1.3;
+    margin-bottom: 10px;
+}
+.content.container .row .col-12 .main_wrapper .content figure .pic{
+    width: 100%;
+}
+.content.container .row .col-12 .main_wrapper .content figure .pic img{
+    max-width: 100%;
+    max-height: 100%;
+}
+.content.container .row .col-12 .main_wrapper .content figure figcaption{
+    color: var(--secondary-title-color);
+    margin: 10px;
+    text-align: center;
+}
+/* side content */
+.content.container .row .col-12 .side_wrapper{
+    margin: 30px 0;
+}
+.content.container .row .col-12 .side_wrapper h3{
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--main-title-color);
+    padding: 10px 0;
+}
+.content.container .row .col-12 .side_wrapper .item{
+    margin: 30px 0;
+}
+.content.container .row .col-12 .side_wrapper .item a .pic img{
+    width: 100%;
+}
+.content.container .row .col-12 .side_wrapper .item a .txt h4{
+    text-align: center;
+    padding: 10px 0;
+    color: var(--secondary-title-color);
+}
+.content.container .row .col-12 .side_wrapper .item a .txt p{
+    color: var(--third-title-color);
+    line-height: 1.3;
+}
+/* recommendation slider */
+.recommendation{
+    color: var(--main-title-color);
+    text-align: center;
+    font-size: 2.5rem;
+    margin: 30px 0;
+}
+.recommendation_slider.owl-carousel.owl-theme{
+    margin-bottom: 60px;
+}
+.recommendation_slider.owl-carousel.owl-theme .slide a .pic img{
+    height: 150px;
+    object-fit: contain;
+}
+.recommendation_slider.owl-carousel.owl-theme .slide a .txt{
+    text-align: center;
+    color: var(--secondary-title-color);
+}
+.recommendation_slider.owl-carousel.owl-theme .owl-dots{
+    bottom: -30px;
+}
+@media screen and (min-width:992px) {
+    /* push */
+    .breadcrumb.container{
+        padding-top: 100px;
+    }
+    /* side content */
+    .content.container{
+        padding-left: 70px;
+    }
+    .content.container .row .col-12 .side_wrapper{
+        margin: 0;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    .content.container .row .col-12 .side_wrapper .item{
+        width: 80%;
+    }
+    .content.container .row .col-12 .side_wrapper h3{
+        font-size: 3rem;
+        padding: 0;
+    }
+    /* recommendation slider */
+    .recommendation_slider.owl-carousel.owl-theme{
+        width: 70%;
+        margin: 0px auto 60px;
+    }
+    
+}
+
