@@ -11,7 +11,7 @@ document.writeln("                    <button class=\'search_btn\'><i class=\'fa
 document.writeln("                </div>");
 document.writeln("                <ul>");
 document.writeln("                    <li>");
-document.writeln("                        <a href=\'index.html\'><img src=\'img/icon/home.png\' alt=\'home\' id=\'home\'>");
+document.writeln("                        <a href=\'index.html\'><img src=\'../img/icon/home.png\' alt=\'home\' id=\'home\'>");
 document.writeln("                        </a>");
 document.writeln("                    </li>");
 document.writeln("                    <li>");
