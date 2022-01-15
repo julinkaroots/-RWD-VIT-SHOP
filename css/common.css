@@ -206,7 +206,7 @@ a{
     width: 100%;
     height: 100%;
     position: absolute;
-    z-index: 100;
+    z-index: -100;
     top: 60px;
     clip-path: circle(0% at 95.3% 8.5%);
     transition: all .3s ease-out;
@@ -217,8 +217,21 @@ a{
     color: #FFFFFF;
     font-weight: 800;
     font-size: 20px;
-    display: block;
+    display: inline-block;
     padding: 5px 10px;
+    position: relative;
+}
+.main_header .main_nav > li > a:after{
+    content: '';
+    position: absolute;
+    background-color: #EAA128;
+    height: 3px;
+    width: 150px;
+    bottom: 0;
+    left: 1%;
+}
+.main_header .main_nav > li:nth-of-type(even) > a:after{
+    width: 160px;
 }
 .main_header .main_nav li ul{
     padding-left: 135px;
@@ -257,6 +270,7 @@ img[alt="LOGO"]{
 .copyright{
     margin: auto;
     font-weight: 300;
+    font-size: 1.5rem;
     padding-top: 20px;
     text-align: center;
 }
@@ -330,6 +344,9 @@ img[alt="LOGO"]{
         position: relative;
         white-space: wrap;
     }
+    .main_header .main_nav > li > a{
+        color: #FFFFFF;
+    }
     .main_nav a{
         text-decoration: none;
         color: #FFFFFF;
@@ -338,6 +355,9 @@ img[alt="LOGO"]{
     }
     .main_nav li > a:hover{
         color: #000000;
+    }
+    .main_header .main_nav > li > a:after{
+        display: none;
     }
     .main_nav li ul > li > a:hover{
         text-decoration-line: underline;
@@ -360,10 +380,6 @@ img[alt="LOGO"]{
         display: block;
         opacity: 1;
     }
-    /* 問題要問 */
-    /* .main_header .header .links ul > li:nth-of-type(1) a:hover{
-        background-image: url(../img/icon/home_move.gif);
-    } */
     .links ul{
         display: flex;
         margin-right: 15px;
@@ -386,7 +402,7 @@ img[alt="LOGO"]{
         margin: 0px;
     }
     .footer{
-        background-image: url("/img/slider\ or\ banner/footer_bgc.png");
+        background-image: url("../img/slider\ or\ banner/footer_bgc.png");
         background-repeat: repeat;
         background-size:contain;
     }

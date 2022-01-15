@@ -6,13 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>V.I.T SHOP</title>
     <!-- ------*js----------->
-    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-    <script src= js/owl/owl.carousel.min.js></script>
+    <script src="./js/jquery.js"></script>
+    <script src="./js/jquery-ui.js"></script>
+    <script src= "./js/owl/owl.carousel.js"></script>
+    <!-- ------js*----------->
     <!-- ------*css----------->
-    <link rel="stylesheet" href="js/owl/assets/owl.carousel.min.css">
-    <link rel="stylesheet" href="js/owl/assets/owl.theme.default.css">
+    <link rel="stylesheet" href="./js/owl/assets/owl.carousel.css">
+    <link rel="stylesheet" href="./js/owl/assets//owl.theme.default.css">
     <!-- ------css*----------->
-    <script src="js/common.js"></script>
+    <!-- ------*js----------->
+    <script src="./js/common.js"></script>
+    <script src="./js/productSlider.js"></script>
     <!-- ------js*----------->
     <!-- ------*css----------->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
@@ -20,9 +24,9 @@
 </head>
 <body>
     <!-- 1. header -->
-    <script src = js/header.js></script>
+    <script src = "./js/header.js"></script>
     <!-- 2. main slider -->
-    <div class="slider owl-carousel owl-theme">
+    <div class="slider owl-carousel owl-theme" id="mainSlider">
         <div class="slide">
             <a href="#">
                 <img src="img/slider or banner/hp_haohao.jpg" alt="doraemon banner" class="mobile">
@@ -50,43 +54,52 @@
     </div>
     <!-- 3. product slider -->
     <div class="container">
-        <div class="product_choice">
+        <div class="product_choice" id='productChoice'>
             <div class="product_slider  owl-carousel owl-theme" id="productSlider">
-                <div class="product_slide">
-                    <a href="#"><img src="img/products/instant_noodles/haohao/pork.png" alt=""></a>
+                <div class="product_slide" id="test">
+                    <img src="img/products/instant_noodles/haohao/pork.png" alt="">
                 </div>
                 <div class="product_slide">
-                    <a href="#"><img src="img/products/instant_noodles/haohao/sate.png" alt=""></a>
+                    <img src="img/products/instant_noodles/haohao/sate.png" alt="">
                 </div>
                 <div class="product_slide">
-                    <a href="#"><img src="img/products/instant_noodles/haohao/shrimp.png" alt=""></a>
+                    <img src="img/products/instant_noodles/haohao/shrimp.png" alt="">
                 </div>
                 <div class="product_slide">
-                    <a href="#"><img src="img/products/instant_noodles/haohao/golden.png" alt=""></a>
+                    <img src="img/products/instant_noodles/haohao/golden.png" alt="">
                 </div>
                 <div class="product_slide">
-                    <a href="#"><img src="img/products/instant_noodles/haohao/stf_onion.png" alt=""></a>
+                    <img src="img/products/instant_noodles/haohao/stf_onion.png" alt="">
                 </div>
                 <div class="product_slide">
-                    <a href="#"><img src="img/products/instant_noodles/haohao/stf_shrimp.png" alt=""></a>
+                    <img src="img/products/instant_noodles/haohao/stf_shrimp.png" alt="">
                 </div>
                 <div class="product_slide">
-                    <a href="#"><img src="img/products/instant_noodles/haohao/vegan.png" alt=""></a>
+                    <img src="img/products/instant_noodles/haohao/vegan.png" alt="">
                 </div>
             </div>
             <div class="info">
-                <h2>Hao Hao Pork Rib and Fried Garlic Flavored Noodle</h2>
-                <div class="desc full">
-                    <span>Manufacture in accordance with Japanese standards and technology, with the continuous operation, support and meticulous supervision of Japanese staffs together with Vietnamese staff methodically trained. We are “guarantee” for the quality of every Hao Hao Noodle pack before being launched into the market.</span>
+                <div class="change">
+                    <h2>Hao Hao Pork Rib and Fried Garlic Flavored Noodle</h2>
+                    <div class="desc full">
+                        <span>Manufacture in accordance with Japanese standards and technology, with the continuous operation, support and meticulous supervision of Japanese staffs together with Vietnamese staff methodically trained. We are “guarantee” for the quality of every Hao Hao Noodle pack before being launched into the market.</span>
+                    </div>
+                    <div class="price">$ 0.5 USD</div>
                 </div>
-                <div class="price">$ 0.5 USD</div>
+                <div class="change">
+                    <h2>Hao Hao Satay and Shallot Flavored Noodle</h2>
+                    <div class="desc full">
+                        <span>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore, iure. Adipisci magni maiores quis eaque alias nobis officiis at veniam!</span>
+                    </div>
+                    <div class="price">$ 0.3 USD</div>
+                </div>
                 <div class="links">
-                    <div class="cart">
-                        <a href="#"><img src="img/icon/cart.png" alt="shopping cart" class="cart">
+                    <div class="cart" id="cartBtn">
+                        <a><img src="img/icon/cart.png" alt="shopping cart" class="cart">
                         </a>
                     </div>
-                    <div class="favorite">
-                        <a href="#"><img src="img/icon/heart.png" alt="fovorite list" class="fovoriteList">
+                    <div class="favoriteList">
+                        <a><img src="img/icon/heart.png" alt="favorite list" class="favoriteList">
                         </a>
                     </div>
                 </div>
@@ -160,13 +173,28 @@
     <div class="bestseller container">
         <h2><img src="img/bestseller/hot.gif" alt="fire icon">BEST SELLERS<img src="img/bestseller/hot.gif" alt="fire icon"></h2>
         <div class="item" data-aos="fade-in" data-aos-duration="1000">
-            <a href="#"><img src="img/bestseller/doraemon_cup.jpg" alt="doraemon cup noodle"></a>
+            <a href="#"><img src="img/bestseller/doraemon_cup.jpg" alt="doraemon cup noodle">
+                <div class="txt">
+                    <h3>Doraemon Cup Noodle</h3>
+                    <p>Doraemon Cup Noodle, with added calcium, will be a suitable choice of moms for her children and the whole family.</p>
+                </div>
+            </a>
         </div>
         <div class="item" data-aos="fade-in" data-aos-duration="1000">
-            <a href="#"><img src="img/bestseller/haohao.png" alt="haohao noodle"></a>
+            <a href="#"><img src="img/bestseller/haohao.png" alt="haohao noodle">
+                <div class="txt">
+                    <h3>Hao Hao Noodle</h3>
+                    <p>Unique scent, with spicy taste, excellent aroma</p>
+                </div>
+            </a>
         </div>
         <div class="item" data-aos="fade-in" data-aos-duration="1000">
-            <a href="#"><img src="img/bestseller/haohao_cup.png" alt="haohao cup noodle"></a>
+            <a href="#"><img src="img/bestseller/haohao_cup.png" alt="haohao cup noodle">
+                <div class="txt">
+                    <h3>Hao Hao Cup Noodle</h3>
+                    <p>Hao Hao Cup Noodle, with added calcium, will be a suitable choice of moms for her children and the whole family.</p>
+                </div>
+            </a>
         </div>
     </div>
     <!-- 6. to share different ways of cooking noodles -->
@@ -209,7 +237,7 @@
         </div>
     </div>
     <!-- footer -->
-    <script src="js/footer.js"></script>
+    <script src="./js/footer.js"></script>
     <script>
         $(document).ready(function(){
             $('.owl-carousel').owlCarousel({

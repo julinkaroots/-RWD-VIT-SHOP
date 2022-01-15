@@ -73,7 +73,18 @@
     width: 60%;
     margin-top: 30px;
     margin-left: 10px;
+    position: relative;
 }
+.container .product_choice .info .change{
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    display: none;
+}
+/* 問題 */
+/* .active{
+    display: block;
+} */
 .container .product_choice .info h2{
     color: var(--main-title-color);
     text-align: center;
@@ -86,12 +97,16 @@
 .container .product_choice .info .links{
     display: flex;
     justify-content: flex-end;
+    position: relative;
+    right: -50px;
+    bottom: -100px;
 }
 .container .product_choice .info .links .cart{
     padding-right: 10px;
 }
 .container .product_choice .info .links a{
     width: 30px;
+    cursor: pointer;
 }
 .container .product_choice .info .links a img{
     max-width: 100%;
@@ -131,7 +146,7 @@
 }
 /* instructions */
 .instruction.container .row{
-    margin-top: 50px;
+    margin-top: 150px;
 }
 .instruction.container .row .col-12 .title{
     color: var(--secondary-title-color);
@@ -166,6 +181,9 @@
     padding-bottom: 10px;
     color: var(--third-title-color);
 }
+.instruction.container .row .col-12 .item .wrap .step_content{
+    font-size: 1.5rem;
+}
 .instruction .noodle_string img{
     max-width: 100%;
     max-height: 100%;
@@ -185,12 +203,23 @@
 }
 .bestseller .item{
     width: 100%;
-    margin: 10px 0px;
+    margin-bottom: 30px;
 }
 .bestseller .item a img{
     max-width: 100%;
     max-height: 100%;
     border-radius: 50px;
+}
+.bestseller .item .txt{
+    text-align: center;
+    line-height: 1.5;
+}
+.bestseller .item .txt h3{
+    color: var(--main-title-color);
+}
+.bestseller .item .txt p{
+    color: #3F4247;
+    font-weight: 900;
 }
 /* culinary */
 .culinary h2{
@@ -265,6 +294,11 @@
         display: block !important;
     }
     /* main slider */
+    #mainSlider.owl-carousel .owl-nav button.owl-prev, #mainSlider.owl-carousel .owl-nav button.owl-next{
+        width: 50px;
+        height: 50px;
+        margin: 10px;
+    }
     .slider .slide{
         padding-top: 100px;
     }
@@ -272,12 +306,19 @@
     .container .product_choice{
         flex-direction: row;
     }
+    .container .product_choice .info{
+        height: 270px;
+    }
     .container .product_choice .info .desc{
         padding: 10px 0px;
         color: var(--third-title-color);
     }
     .container .product_choice .info .price{
         padding: 10px 0px;
+    }
+    .container .product_choice .info .links{
+        right: 0;
+        bottom: -100%;
     }
     .container .product_choice .info .links a{
         display: block;
@@ -300,22 +341,64 @@
     /* bestsellers */
     .bestseller .item{
         height: 297px;
-        margin: 0;
+        position: relative;
+        margin-bottom: 0px;
+    }
+    .bestseller .item:nth-of-type(2){
+        display: flex;
+        flex-direction: row-reverse;
+    }
+    .bestseller .item a{
+        height: inherit;
+        width: inherit;
+        display: contents;
+    }
+    .bestseller .item a img{
+        position: absolute;
+    }
+    .bestseller .item .txt{
+        width: 720px;
+        height: 100%;
+        border-radius: 50px;
+        top: 0;
+        background-color: rgba(255, 255, 255, .5);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        opacity: 0;
         position: relative;
     }
-    .bestseller .item img{
-        position: absolute;
+    .bestseller .item a:hover .txt{
+        opacity: 1;
+        animation: slide 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940), both;
+    }
+    @keyframes slide {
+        0% {
+            transform: translateY(-100px) translateX(-100px);
+            transform: translateY(-100px) translateX(-100px);
+        }
+        100% {
+            transform: translateY(0px) translateX(0px);
+            transform: translateY(0px) translateX(0px);
+        }
     }
     .bestseller .item:nth-child(3) a >img{
         right: 0;
         top: -8%;
     }
+    .bestseller .item:nth-child(3) .txt{
+        top: -8%;
+    }
     .bestseller .item:nth-child(4) a >img{
         bottom: 13%;
     }
+    .bestseller .item:nth-child(4) .txt{
+        top: -13%;
+    }
     /* culinary */
     .culinary{
-        background-image: url(/img/slider\ or\ banner/culinary_bgc.png);
+        background-image: url(../img/slider\ or\ banner/culinary_bgc.png);
         background-size: contain;
         border-radius: 50px;
         background-repeat: no-repeat;

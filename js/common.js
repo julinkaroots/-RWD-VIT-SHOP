@@ -79,27 +79,27 @@ window.addEventListener('load', function(){
     //<-----*hover change img------>
     // home
     $('#home').mouseover(function(){
-        $(this).attr('src', './img/icon/home_move.gif');
+        $(this).attr('src', 'img/icon/home_move.gif');
     }).mouseout(function(){
-        $(this).attr('src', './img/icon/home.png');
+        $(this).attr('src', 'img/icon/home.png');
     })
     //login
     $('#login').mouseover(function(){
-        $(this).attr('src', './img/icon/login_move.gif');
+        $(this).attr('src', 'img/icon/login_move.gif');
     }).mouseout(function(){
-        $(this).attr('src', './img/icon/login.png');
+        $(this).attr('src', 'img/icon/login.png');
     })
-    //fovorite list
-    $('.fovoriteList').mouseover(function(){
-        $(this).attr('src', './img/icon/heart_hover.png');
+    //favorite list
+    $('.favoriteList').mouseover(function(){
+        $(this).attr('src', 'img/icon/heart_hover.png');
     }).mouseout(function(){
-        $(this).attr('src', './img/icon/heart.png');
+        $(this).attr('src', 'img/icon/heart.png');
     })
     //shopping cart
     $('.cart').mouseover(function(){
-        $(this).attr('src','./img/icon/cart_hover.gif');
+        $(this).attr('src','img/icon/cart_hover.gif');
     }).mouseout(function(){
-        $(this).attr('src','./img/icon/cart.png');
+        $(this).attr('src','img/icon/cart.png');
     })
     //<------hover change img*------>
 
@@ -119,4 +119,5 @@ window.addEventListener('load', function(){
     //     })
     // })
     //<------breadcrumb*------>
+
 })
