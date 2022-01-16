@@ -61,7 +61,7 @@ window.addEventListener('load', function(){
             $(this).attr('placeholder', 'find your love here!');
         }
     })
-    //search bar with js(practice only)
+    // <-----search bar with js(practice only)*------>
     // let searchSection = document.getElementById('searchSection');
 
     // function focusFunction(){
@@ -74,7 +74,7 @@ window.addEventListener('load', function(){
     // }
     // searchSection.addEventListener('focus', focusFunction, false);
     // searchSection.addEventListener('blur', blurFunction, false);
-    //<-----search bar with jquery*------>
+    //<-----search bar with js*------>
 
     //<-----*hover change img------>
     // home
@@ -104,9 +104,9 @@ window.addEventListener('load', function(){
     //<------hover change img*------>
 
     //<------*hamburger list------>
-    document.querySelector('#menu_btn').addEventListener('click', function(){
-        document.querySelector('#menu_btn').classList.toggle('close');
-        document.querySelector('.main_nav').classList.toggle('active');
+    $('#menu_btn').click(function(){
+        $(this).toggleClass('rotate');
+        $('#mainNav').toggleClass('active');
     })
     //<------hamburger list*------>
 

@@ -47,6 +47,17 @@
 .number{
     display: none;
 }
+.to_top{    
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 1%;
+    color: var(--main-title-color);;
+    border-color: var(--main-title-color);
+    right: 1%;
+    border-radius: 50px;
+    cursor: pointer;
+}
 @media screen and (min-width:992px) {
     .breadcrumb.container{
         margin-bottom: 30px;
@@ -87,7 +98,7 @@
         height: 60px;
     }
     .number{
-        display: block;
+        /* display: block; */
         position: fixed;
         bottom: 0;
         right: 0;
@@ -103,6 +114,29 @@
     }
     .number li a:hover{
         border-radius: 50%;
+        background-color: var(--main-title-color);
+        color: #fff;
+    }
+    .show_numberBar{
+        display: block;
+        transition: 600ms ease-in-out;
+        transform: translateY(-27%);
+        animation: move .5s;
+    }
+    @keyframes move{
+        from{
+            transform: translateY(-50%);
+        }
+        to{
+            transform: translateY(-27%);
+        }
+    }
+    /* .highlight{
+        border-radius: 50%;
+        background-color: var(--main-title-color);
+        color: #fff;
+    } */
+    .to_top:hover{
         background-color: var(--main-title-color);
         color: #fff;
     }
