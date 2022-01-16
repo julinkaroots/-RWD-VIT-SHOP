@@ -74,6 +74,7 @@
 @media screen and (min-width:992px) {
     /* push */
     .breadcrumb.container{
+        padding-left: 9%;
         padding-top: 100px;
     }
     /* side content */

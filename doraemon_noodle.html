@@ -5,9 +5,185 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DORAEMON NOODLE</title>
-    
+    <script src="./js/jquery.js"></script>
+    <script src= "./js/owl/owl.carousel.js"></script>
+    <script src="./js/productSlider.js"></script>
+    <link rel="stylesheet" href="./js/owl/assets/owl.carousel.css">
+    <link rel="stylesheet" href="./js/owl/assets//owl.theme.default.css">
+    <script src="./js/common.js"></script>
+    <link rel="stylesheet" href="./css/culinary.css">
+    <link rel="stylesheet" href="./css/culinary_article.css">
+    <link rel="stylesheet" href="./css/doraemon_noodle.css">
 </head>
 <body>
-    
+    <!-- 1. header -->
+    <script src="./js/header.js"></script>
+    <!-- 2. banner -->
+    <div class="banner">
+        <img src="img/slider or banner/doraemon_noodle.jpeg" alt="culinary world banner">
+    </div>
+    <!-- 3. breadcrumb -->
+    <div class="breadcrumb container">
+        <ol class="wrap">
+            <li><a href="index.html"><p>Home</p></a></li>
+            <li><a href="instant_noodles.html"><p>Instant Noodles</p></a></li>
+            <li class="direction"><a href="doraemon_noodle.html"><p>Doraemon Noodle</p></a></li>
+        </ol>
+    </div>
+    <!-- 4. product slider -->
+    <div class="container">
+        <div class="product_choice" id='productChoice'>
+            <div class="product_slider  owl-carousel owl-theme" id="productSlider">
+                <div class="product_slide" id="test">
+                    <img src="img/products/doraemon_noodle/beef.png" alt="">
+                </div>
+                <div class="product_slide">
+                    <img src="img/products/doraemon_noodle/garlic.png" alt="">
+                </div>
+                <div class="product_slide">
+                    <img src="img/products/doraemon_noodle/milk.png" alt="">
+                </div>
+            </div>
+            <div class="info">
+                <div class="change">
+                    <h2>DORAEMON NOODLE - ROLLED BEEF WITH CHEESE</h2>
+                    <div class="desc full">
+                        <span>ROLLED BEEF WITH CHEESE flavored Doraemon instant noodle is not only delicious, kid friendly, but also promotes height growth effectively because of calcium supplemented noodles combined with motor sports suitable for kids. The set of stickers that will follow the theme of sports and with the presence of character Doraemon will create the excitement for kids and create the sympathy of parents for the brand.</span>
+                    </div>
+                    <div class="price">$ 0.8 USD</div>
+                </div>
+                <div class="change">
+                    <h2>DORAEMON NOODLE - SHRIMP, CHICKEN AND FRIED GARLIC</h2>
+                    <div class="desc full">
+                        <span>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore, iure. Adipisci magni maiores quis eaque alias nobis officiis at veniam!</span>
+                    </div>
+                    <div class="price">$ 0.8 USD</div>
+                </div>
+                <div class="links">
+                    <div class="cart" id="cartBtn">
+                        <a><img src="img/icon/cart.png" alt="shopping cart" class="cart">
+                        </a>
+                    </div>
+                    <div class="favoriteList">
+                        <a><img src="img/icon/heart.png" alt="favorite list" class="favoriteList">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 5. instructions -->
+    <div class="instruction container">
+        <div class="row">
+            <div class="col-12 col-lg-12">
+                <div class="title">COOKING INSTRUCTIONS</div>
+                <span>General</span>
+                <div class="instruction_wrapper">
+                    <div class="item">
+                        <div class="pic"><img src="img/step/general_add.png" alt="Step1">
+                        </div>
+                        <div class="wrap">
+                            <div class="step">Step1</div>
+                            <div class="step_content">Put dried noodle, powder soup package and oil package in the cup</div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="pic"><img src="img/step/general_pour.png" alt="Step2">
+                        </div>
+                        <div class="wrap">
+                            <div class="step">Step2</div>
+                            <div class="step_content">Pour 400 ml of boiling water in, close the lid and wait for 3 minutes</div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="pic"><img src="img/step/general_finish.png" alt="Step3">
+                        </div>
+                        <div class="wrap">
+                            <div class="step">Step3</div>
+                            <div class="step_content">Stir well and serve immediately</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 6. recommendation -->
+    <h3 class="recommendation">MORE PRODUCTS YOU MAY LIKE</h3>
+    <div class="recommendation_slider owl-carousel owl-theme" id="recommendation_slider">
+        <div class="slide">
+            <a href="#">
+                <div class="pic">
+                    <img src="./img/culinary_article/gochinoodle.png" alt="gochinoodle">
+                </div>
+                <div class="txt">Gochi Noodle</div>
+            </a>
+        </div>
+        <div class="slide">
+            <a href="#">
+                <div class="pic">
+                    <img src="./img/culinary_article/ramen.png" alt="Oh! Ramen!">
+                </div>
+                <div class="txt">Oh! Ramen!</div>
+            </a>
+        </div>
+        <div class="slide">
+            <a href="#">
+                <div class="pic">
+                    <img src="./img/culinary_article/udon.png" alt="Udon Noodle">
+                </div>
+                <div class="txt">Udon Noodle</div>
+            </a>
+        </div>
+        <div class="slide">
+            <a href="#">
+                <div class="pic">
+                    <img src="./img/products/doraemon_cup/winter.png" alt="doraemon cup noodle-winter">
+                </div>
+                <div class="txt">DORAEMON MINI INSTANT NOODLE CUP</div>
+            </a>
+        </div>
+        <div class="slide">
+            <a href="#">
+                <div class="pic">
+                    <img src="./img/products/doraemon_cup/winter.png" alt="doraemon cup noodle-winter">
+                </div>
+                <div class="txt">DORAEMON MINI INSTANT NOODLE CUP</div>
+            </a>
+        </div>
+    </div>
+    <script src="./js/footer.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#productSlider.owl-carousel').owlCarousel({
+                loop:true,
+                margin:10,
+                responsiveClass:true,
+                responsive:{
+                    0:{
+                        items:1,
+                        nav:true
+                    },
+                }
+            })
+        }); 
+        $(document).ready(function(){
+            $('#recommendation_slider').owlCarousel({
+                loop:true,
+                margin:10,
+                dotsEach: true,
+                responsiveClass:true,
+                responsive:{
+                    0:{
+                        items:2,
+                        nav:true
+                    },
+                    992:{
+                        items:4,
+                        nav:true
+                    },
+                }
+            })
+        }); 
+    </script>
 </body>
 </html>

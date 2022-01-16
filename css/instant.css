@@ -62,11 +62,8 @@
     /* breadcrumb位置處理 */
     .breadcrumb.container{
         max-width: none;
-        padding-left: 3%;
-    }
-    /* .breadcrumb.container .wrap{
         padding-left: 9%;
-    } */
+    }
     /* 展示區 */
     .display.container .row{
         justify-content: space-between;
