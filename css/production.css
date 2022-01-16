@@ -120,15 +120,15 @@
     .show_numberBar{
         display: block;
         transition: 600ms ease-in-out;
-        transform: translateY(-27%);
+        transform: translateY(-10%);
         animation: move .5s;
     }
     @keyframes move{
         from{
-            transform: translateY(-50%);
+            transform: translateY(-25%);
         }
         to{
-            transform: translateY(-27%);
+            transform: translateY(-10%);
         }
     }
     /* .highlight{
