@@ -35,15 +35,15 @@ window.addEventListener('load', function(){
         // console.log(dragImg) 15
 
         // 3. the img
-        let dragImg = $('#test');
+        let dragImg = $('#productSlider .owl-item.active img');
         // 4. clone the img
         let cloneImg = dragImg.clone();
         // 5. its style after flying
         cloneImg.css({
             'opacity': '0.5',
             'position': 'absolute',
-            'height': '500px',
-            'width': '500px',
+            'height': '150px',
+            'width': '150px',
             'z-index': '1000',
             'left':dragImg.offset().left-50,
             'top':dragImg.offset().top,
