@@ -24,7 +24,7 @@
 /* arrow: section of the main slider */
 .owl-carousel .owl-nav button.owl-prev,.owl-carousel .owl-nav button.owl-next{
     position: absolute;
-    margin: 0px;
+    margin: 10px;
     top: 50%;
     width: 30px;
     height: 30px;

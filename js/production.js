@@ -1,18 +1,12 @@
 $(function(){
     //anchor
-    $('a[href*="#"]:not([href="#featured"])').click(function(){ 
-        if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-            var target = $(this.hash);
-            target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-            if (target.length) {
-                // Smooth scroll to link section
-                $('html, body').animate({
-                scrollTop: target.offset().top - 90
-                }, 900);
-                return false;
-            }
-        }
-    });
+    $('a').on('click', function(){
+        let link = $(this).attr('href');
+        // console.log(link);
+        $('html, body').animate({
+            scrollTop: $(link).offset().top
+        }, 900);
+    })
 
     //at designated point, show or hide the number bar
     $(window).scroll(function(){
@@ -23,9 +17,9 @@ $(function(){
         let hidePoint = $('#step_10').offset().top + $('#step_10').outerHeight() - ($('#step_10').outerHeight() / 2);
         // console.log(hidePoint);
 
-        if(scrollTop >= showPoint && scrollTop <= hidePoint){
+        if(scrollTop >= showPoint && scrollTop <= hidePoint){ //show
             $('.number').addClass('show_numberBar');
-        }else{
+        }else{ //hide
             $('.number').removeClass('show_numberBar');
         }
     });
